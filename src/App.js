@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+import CustomButton from './CustomButton';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Container d-flex align-items-center justify-content-center" style={{minHeight:"100vh"}}>
+      <div className="row">
+        <div className="col">
+        <CustomButton startIcon="all_inclusive" size="sm" color="primary" variant="default">Infinity</CustomButton>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+        <CustomButton startIcon="weekend" size="md" color="secondary" variant="text">Movie Night</CustomButton>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+        <CustomButton startIcon="whatshot" size="lg" color="danger" variant="outline">Fire</CustomButton>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+        <CustomButton endIcon="delete">Delete</CustomButton>
+        </div>
+      </div>
     </div>
   );
 }
